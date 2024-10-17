@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Fotos</title>
+    <style>
+        
+        .galeria {
+            position: relative;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-gap: 10px;
+            margin: 20px;
+            width: auto;
+            animation: mianimacion 5s infinite;
+        }
+
+        .galeria img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .galeria img:hover {
+            opacity: 0.9;
+        }
+
+        .boston {
+            position: absolute;
+            left: 1000px;
+            margin-bottom: auto;
+            transform: translateX(-50%);
+            width: 300px;
+            height: auto;
+            top: 350px;
+            z-index: 3;
+            float: right;
+            animation: mianimacion 5s infinite;
+        }
+
+        @keyframes mianimacion{
+            0% {
+                width: 350px;
+            }
+
+            50% {
+                width: 400px;
+            }
+
+            100% {
+                width: 350px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Galería de fotos -->
+<div class="galeria">
+
+    <a href="kyrie2.jpg" target="_blank"><img src="kyrie2.jpg" alt="Imagen 1"></a>
+    <a href="kyrie-irving-dallas.jpg" target="_blank"><img src="kyrie-irving-dallas.jpg" alt="Imagen 2"></a>
+    <a href="nba_kyrie_nets.jpg" target="_blank"><img src="nba_kyrie_nets.jpg" alt="Imagen 3"></a>
+    <a class="boston" href="Boston_Celtics.png" target="_blank"><img src="Boston_Celtics.png" alt="Imagen 3"></a>
+   
+</div>
+
+</body>
+</html>
