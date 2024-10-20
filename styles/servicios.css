@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Estilo del encabezado */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 30px;
+    top: 0;
+    right: 0;
+    justify-content: space-between;
+    background: linear-gradient(135deg, rgba(30, 30, 30, 0.9), rgba(50, 50, 50, 0.9));
+    backdrop-filter: blur(8px);
+    border-bottom: 2px solid #ff9900;
+    color: white;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    width: 100%;
+    transition: 0.7s;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header ul{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header.abajo {
+    background-color: #fff;
+    padding: 30px 40px;
+}
+
+header a {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+    font-size: 25px;
+    margin-left: 20px;
+    text-decoration: none;
+    color: #fff;
+    transition: transform 0.3s ease, color 0.3s ease; 
+}
+
+header a:hover {
+    transform: scale(1.1); 
+    color: #ff9900; 
+}
+
+header ul{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li {
+    position: relative;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 12px;
+    transition: color 0.3s, background-color 0.3s;
+    border-radius: 8px;
+}
+
+nav ul li a:hover {
+    color: #ff9900;
+    background-color: rgba(255, 153, 0, 0.1);
+}
+
+/* Indicador activo en el menú */
+nav ul li a.active {
+    color: #ff9900;
+    background-color: rgba(255, 153, 0, 0.15);
+    box-shadow: 0 2px 8px rgba(255, 153, 0, 0.3);
+    border-radius: 8px;
+}
+
+.main {
+    margin-top: 100px;
+    position: relative;
+    flex: 1;
+    padding: 50px;
+    background-color: #fff;
+}
+
+/* Sección de servicios */
+.services-section {
+    padding: 50px 0;
+    background-color: #f4f4f4;
+}
+
+.services-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.services-title {
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #1e1e1e;
+}
+
+.services-description {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 50px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-title {
+    font-size: 22px;
+    color: #1e1e1e;
+    margin: 15px 0;
+}
+
+.card-description {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.card-features {
+    list-style: none;
+    padding-left: 0;
+    text-align: left;
+}
+
+.card-features li {
+    color: #333;
+    margin-bottom: 8px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between; /* Distribuir los elementos entre los extremos */
+    padding: 50px;
+    background: linear-gradient(135deg, rgba(30, 30, 30, 0.9), rgba(50, 50, 50, 0.9));
+    color: white;
+}
+
+.containerFooter {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px; /* Limitar el ancho máximo del footer */
+    margin: 0 auto; /* Centrar el contenido horizontalmente */
+}
+
+.footer-logo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-logo img {
+    width: 40px; /* Ajusta el tamaño del logo */
+    margin-bottom: 10px;
+}
+
+.footer-logo p {
+    color: white;
+    margin: 0;
+}
+
+.footer-section {
+    flex: 1;
+    text-align: center;
+}
+
+footer .footer {
+    padding: 25px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer li {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    padding: 10px 0;
+    color: #ff9900;
+}
+
+footer a {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    color: #ff9900;
+    text-align: center;
+    width: 100%;
+}
+
+footer a:hover {
+    color: #ffffff; 
+}
+
+footer img{
+    position: static;
+    width: 200px;
+    height: 200px;
+    align-items: center;
+}
